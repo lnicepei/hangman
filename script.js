@@ -1,12 +1,13 @@
 document.getElementById("start").addEventListener('click', getWord);
 function playGame(word) {
     document.querySelector("#inputWord").value = "";
-    alert("Guess the word!");
     let guess = "_".repeat(word.length);
     let livesCount = 3;
     let result = 0;
-
+    
     document.querySelector(".log").textContent = guess;
+    document.querySelector(".input").innerHTML = "";
+    alert("Guess the word!");
     for (let i = 0; i < livesCount; i++) {
         let letter;
         let correctLetterArray = []; //serves as a container for indexes of letters
